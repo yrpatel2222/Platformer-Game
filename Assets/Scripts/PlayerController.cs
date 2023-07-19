@@ -33,4 +33,11 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
         }
     }
+
+    void FixedUpdate()
+    {
+
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+
+    }
 }
