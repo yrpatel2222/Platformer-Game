@@ -55,4 +55,7 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+      // Prefab or template object to respawn
+
+    // Example method to respawn all objects
 }

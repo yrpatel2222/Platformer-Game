@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathBarrier : MonoBehaviour
 {
@@ -12,9 +13,18 @@ public class DeathBarrier : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Reset the character position to the starting point
-            collision.transform.position = startPoint.position;
+            RestartScene();
             // You can also reset any other variables or states related to the character here
         }
+    }
+
+    private void RestartScene()
+    {
+        // Get the current scene index
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        // Restart the scene
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
 
