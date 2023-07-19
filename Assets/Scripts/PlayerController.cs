@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5.0f;
     public bool isOnGround = true;
     public Rigidbody2D playerRb;
+    private static int sceneCount = 1;
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
@@ -35,7 +36,8 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Finish"))
         {
-            SceneManager.LoadScene("level2");
+            SceneManager.LoadScene(sceneCount);
+            sceneCount++;
         }
     }
 

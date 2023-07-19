@@ -21,10 +21,10 @@ public class Spawn : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        float distance = Vector2.Distance(transform.distance, player.transform.position);
+        float distance = Vector2.Distance(transform.position, player.transform.position);
         Debug.Log(distance);
 
-        if(distance < 4)
+        if(distance < 8)
         {
             timer += Time.deltaTime;
 
