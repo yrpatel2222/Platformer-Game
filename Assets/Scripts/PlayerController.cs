@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 7;
     public float jumpForce = 5.0f;
     public bool isOnGround = true;
-    private Rigidbody2D playerRb;
+    public Rigidbody2D playerRb;
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
