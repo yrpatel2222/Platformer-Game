@@ -11,7 +11,8 @@ public class Enemy : MonoBehaviour
     public float movementSpeed = 2f; // Speed of movement in units per second
 
     private bool movingRight = true; // Flag to determine movement direction
-    private Vector2 startingPosition; // Starting position of the enemy
+    private Vector2 startingPosition; // Starting position of the enem
+    
 
     void Start()
     {
@@ -52,6 +53,7 @@ public class Enemy : MonoBehaviour
             else
             {
                 Player.transform.position = startPoint.transform.position;
+                FindObjectOfType<LivesUI>().DecreaseLives();
             }
         }
     }

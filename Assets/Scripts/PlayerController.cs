@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
     public Rigidbody2D playerRb;
     private static int sceneCount = 1;
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
