@@ -41,7 +41,18 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player.transform.position = startPoint.transform.position;
+            Rigidbody2D playerRigidbody = collision.collider.GetComponent<Rigidbody2D>();
+
+            // Check if the player is above the enemy and moving downwards
+            if (playerRigidbody.velocity.y < 0 && collision.contacts[0].point.y > transform.position.y)
+            {
+                // Stomp on the enemy
+                Destroy(gameObject);  // Remove the enemy from the scene
+            }
+            else
+            {
+                Player.transform.position = startPoint.transform.position;
+            }
         }
     }
 }
