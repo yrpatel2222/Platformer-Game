@@ -30,6 +30,7 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             player.transform.position = startPoint.transform.position;
+            FindObjectOfType<LivesUI>().DecreaseLives();
 
         }
         if (collision.gameObject.CompareTag("Ground"))

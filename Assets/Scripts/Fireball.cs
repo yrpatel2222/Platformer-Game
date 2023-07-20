@@ -19,7 +19,7 @@ public class Fireball : MonoBehaviour
         {
             // Reset the character position to the starting point
             RestartScene();
-            //FindObjectOfType<LivesUI>().DecreaseLives();
+            FindObjectOfType<LivesUI>().DecreaseLives();
             // You can also reset any other variables or states related to the character here
         }
     }
