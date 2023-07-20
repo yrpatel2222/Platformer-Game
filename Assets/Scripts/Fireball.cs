@@ -3,21 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeathBarrier : MonoBehaviour
-{  // The starting point of the level
+public class Fireball : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public float rotationSpeed = 2f;
 
-    // OnTriggerEnter2D is called when the character collides with the death barrier
+    private void Update()
+    {
+        transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             // Reset the character position to the starting point
             RestartScene();
-            FindObjectOfType<LivesUI>().DecreaseLives();
+            //FindObjectOfType<LivesUI>().DecreaseLives();
             // You can also reset any other variables or states related to the character here
         }
     }
-
     private void RestartScene()
     {
         // Get the current scene index
@@ -27,4 +32,3 @@ public class DeathBarrier : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex);
     }
 }
-
