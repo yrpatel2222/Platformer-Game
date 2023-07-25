@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class LivesUI : MonoBehaviour
@@ -9,6 +10,7 @@ public class LivesUI : MonoBehaviour
     public TextMeshProUGUI livesText;
     public int startingLives = 3;
     private int currentLives;
+    public GameObject Player;
 
     private static LivesUI instance;
 
@@ -25,7 +27,7 @@ public class LivesUI : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         currentLives = startingLives;
         UpdateLivesText();
@@ -40,7 +42,7 @@ public class LivesUI : MonoBehaviour
         {
             // Add game over logic here
             // For example: Reload the level, show game over screen, etc.
-            Debug.Log("Game Over!");
+            SceneManager.LoadScene(0);
         }
     }
 

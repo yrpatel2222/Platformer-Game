@@ -10,12 +10,17 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5.0f;
     public bool isOnGround = true;
     public Rigidbody2D playerRb;
-    private static int sceneCount = 1;
+    public static int sceneCount = 2;
+
 
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        // Set the value to return
     }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -39,6 +44,7 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(sceneCount);
             sceneCount++;
+
         }
     }
 
