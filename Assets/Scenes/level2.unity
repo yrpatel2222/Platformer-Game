@@ -282,8 +282,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1558915227}
   - {fileID: 2139001394}
+  - {fileID: 1558915227}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -758,7 +758,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99daa512fc114bf42b0de5a8178a4e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: {fileID: 1996690197}
 --- !u!61 &741491362
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1169,11 +1168,6 @@ Transform:
 --- !u!1 &1996690196 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4492968694782739897, guid: b9e7b0c3cccff3241a7da6d0130e673d, type: 3}
-  m_PrefabInstance: {fileID: 133897254307956476}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1996690197 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2251664711878699835, guid: b9e7b0c3cccff3241a7da6d0130e673d, type: 3}
   m_PrefabInstance: {fileID: 133897254307956476}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2035946405
