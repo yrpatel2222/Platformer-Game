@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 4353967898398062524}
   m_Layer: 0
   m_Name: Falling Enemy
-  m_TagString: Untagged
+  m_TagString: FallingEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

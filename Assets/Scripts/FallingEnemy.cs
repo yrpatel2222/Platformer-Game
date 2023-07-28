@@ -34,9 +34,16 @@ public class FallingEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        while (transform.childCount > 0)
+        if(collision.gameObject.CompareTag("Respawn"))
         {
-            DestroyImmediate(transform.GetChild(0).gameObject);
+            for (var i = gameObject.transform.childCount - 1; i >= 0; i--)
+            {
+                // only destroy tagged object
+                if (gameObject.transform.GetChild(i).gameObject.tag == "FallingEnemy")
+                    Destroy(gameObject.transform.GetChild(i).gameObject);
+            }
+
+            Destroy(gameObject);
         }
     }
 
@@ -48,4 +55,5 @@ public class FallingEnemy : MonoBehaviour
     // Restart the scene
     SceneManager.LoadScene(currentSceneIndex);
     }
+
 }
