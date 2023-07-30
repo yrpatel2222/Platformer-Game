@@ -10,6 +10,7 @@ public class Spawn : MonoBehaviour
 
     private float timer;
     private GameObject player; 
+    public int distFromPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class Spawn : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        if(distance < 8)
+        if(distance < distFromPlayer)
         {
             timer += Time.deltaTime;
 

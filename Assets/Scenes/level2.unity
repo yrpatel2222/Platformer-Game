@@ -1270,6 +1270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6516863067930105907, guid: 6c57e27ded1932f42ad52b801048a8ca, type: 3}
   bulletPos: {fileID: 1797429329}
+  distFromPlayer: 8
 --- !u!114 &2035946409
 MonoBehaviour:
   m_ObjectHideFlags: 0

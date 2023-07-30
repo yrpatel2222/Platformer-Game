@@ -999,6 +999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6516863067930105907, guid: 6c57e27ded1932f42ad52b801048a8ca, type: 3}
   bulletPos: {fileID: 293894687}
+  distFromPlayer: 0
 --- !u!212 &927489080
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1340,8 +1341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4140ff617c04c4da457dec7ddc9461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: {fileID: 0}
-  Player: {fileID: 0}
+  startPoint: {fileID: 502123000}
+  Player: {fileID: 1976990948}
   movementRange: 4
   movementSpeed: 3
 --- !u!4 &1334326833
