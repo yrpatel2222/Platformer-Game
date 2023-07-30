@@ -8,6 +8,7 @@ public class Fireball : MonoBehaviour
     // Start is called before the first frame update
     public float rotationSpeed = 2f;
 
+
     private void Update()
     {
         transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
