@@ -7,6 +7,9 @@ public class BossPlatform : MonoBehaviour
     public GameObject wall;
     public GameObject Boss;
     public GameObject Enemy;
+    public GameObject bossCamera;
+    public GameObject mainCamera;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +18,10 @@ public class BossPlatform : MonoBehaviour
             wall.SetActive(true);
             Boss.SetActive(true);
             Enemy.SetActive(false);
+
+            // Move the camera to the boss platform
+            bossCamera.SetActive(true);
+            mainCamera.SetActive(false);
         }
     }
 
@@ -25,6 +32,10 @@ public class BossPlatform : MonoBehaviour
             wall.SetActive(false);
             Boss.SetActive(false);
             Enemy.SetActive(true);
+
+            // Reset the camera target to the player
+            bossCamera.SetActive(false);
+            mainCamera.SetActive(true);
         }
     }
-} 
+}
