@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - DestroyedObject
+  - Boss
   layers:
   - Default
   - TransparentFX

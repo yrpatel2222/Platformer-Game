@@ -9,14 +9,18 @@ public class BossPlatform : MonoBehaviour
     public GameObject Enemy;
     public GameObject bossCamera;
     public GameObject mainCamera;
-
+    private bool bossDestroyed;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        bossDestroyed = FindObjectOfType<BossKillButton>().bossDestroyed;
         if (collision.CompareTag("Player"))
         {
             wall.SetActive(true);
-            Boss.SetActive(true);
+            if (!bossDestroyed)
+            {
+                Boss.SetActive(true);
+            }
             Enemy.SetActive(false);
 
             // Move the camera to the boss platform
@@ -27,12 +31,15 @@ public class BossPlatform : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        bossDestroyed = FindObjectOfType<BossKillButton>().bossDestroyed;
         if (collision.CompareTag("Player"))
         {
             wall.SetActive(false);
-            Boss.SetActive(false);
+            if (!bossDestroyed)
+            {
+                Boss.SetActive(false);
+            }
             Enemy.SetActive(true);
-
             // Reset the camera target to the player
             bossCamera.SetActive(false);
             mainCamera.SetActive(true);
