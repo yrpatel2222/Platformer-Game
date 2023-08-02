@@ -6,6 +6,7 @@ public class BossController : MonoBehaviour
 {
     public float jumpForce = 8f;
     public float jumpInterval = 3f; // Time interval between jumps (in seconds)
+    public float moveRange = 2f; // Maximum distance boss can move left and right
 
     private Rigidbody2D rb;
     private bool canJump = true;
@@ -15,10 +16,16 @@ public class BossController : MonoBehaviour
     private float jumpTimer = 0f;
     private bool isJumping = false;
 
+    private bool moveRight = true; // Direction for boss movement
+    private float originalX; // Original X position of the boss
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
+
+        // Store the original X position of the boss
+        originalX = transform.position.x;
     }
 
     private void Update()
@@ -34,6 +41,27 @@ public class BossController : MonoBehaviour
                 canJump = false;
                 jumpTimer = 0f;
             }
+        }
+
+        // Move the boss left and right slightly
+        MoveHorizontally();
+    }
+
+    private void MoveHorizontally()
+    {
+        if (moveRight)
+        {
+            // Move right
+            transform.Translate(Vector2.right * Time.deltaTime);
+            if (transform.position.x >= originalX + moveRange)
+                moveRight = false;
+        }
+        else
+        {
+            // Move left
+            transform.Translate(Vector2.left * Time.deltaTime);
+            if (transform.position.x <= originalX - moveRange)
+                moveRight = true;
         }
     }
 
