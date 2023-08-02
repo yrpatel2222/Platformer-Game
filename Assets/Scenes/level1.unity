@@ -1018,9 +1018,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   livesScreen: {fileID: 1518102660}
   livesText: {fileID: 1740849132}
-  startingLives: 3
+  startingLives: 5
   Player: {fileID: 993691965}
-  maxLives: 5
+  maxLives: 8
 --- !u!4 &806702974
 Transform:
   m_ObjectHideFlags: 0
