@@ -11,6 +11,7 @@ public class LivesUI : MonoBehaviour
     public int startingLives = 3;
     private int currentLives;
     public GameObject Player;
+    public int maxLives = 5;
 
     private static LivesUI instance;
 
@@ -44,6 +45,16 @@ public class LivesUI : MonoBehaviour
             // For example: Reload the level, show game over screen, etc.
             SceneManager.LoadScene(0);
         }
+    }
+
+    public void IncreaseLives(int amount = 1)
+    {
+        currentLives += amount;
+
+        // Clamp the lives value to the maximum allowed
+        currentLives = Mathf.Clamp(currentLives, 0, maxLives);
+
+        UpdateLivesText();
     }
 
     private void UpdateLivesText()

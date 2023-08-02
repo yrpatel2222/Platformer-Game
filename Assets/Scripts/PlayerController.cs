@@ -19,9 +19,6 @@ public class PlayerController : MonoBehaviour
         // Set the value to return
     }
 
-
-
-
     // Update is called once per frame
     void Update()
     {
@@ -44,7 +41,7 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(sceneCount);
             sceneCount++;
-
+            FindObjectOfType<LivesUI>().IncreaseLives();
         }
     }
 
