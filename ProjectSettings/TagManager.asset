@@ -8,6 +8,7 @@ TagManager:
   - DestroyedObject
   - Boss
   - Wall
+  - Enemy
   layers:
   - Default
   - TransparentFX

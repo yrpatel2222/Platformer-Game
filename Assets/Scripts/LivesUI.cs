@@ -8,10 +8,10 @@ public class LivesUI : MonoBehaviour
 {
     public GameObject livesScreen;
     public TextMeshProUGUI livesText;
-    public int startingLives = 3;
+    public int startingLives = 5;
     private int currentLives;
     public GameObject Player;
-    public int maxLives = 5;
+    public int maxLives = 8;
 
     private static LivesUI instance;
 

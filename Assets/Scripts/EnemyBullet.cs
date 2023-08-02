@@ -34,7 +34,7 @@ public class EnemyBullet : MonoBehaviour
             FindObjectOfType<LivesUI>().DecreaseLives();
 
         }
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Respawn"))
         {
             Destroy(gameObject);
         }
