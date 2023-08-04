@@ -16,8 +16,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Enemy Layer
+  - Canon Layer
   - 
   - 
   - 
@@ -45,4 +45,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemy Layer
+    uniqueID: 2099925325
+    locked: 0
+  - name: Canon Layer
+    uniqueID: 474429759
     locked: 0
