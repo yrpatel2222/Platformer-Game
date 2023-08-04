@@ -12,4 +12,10 @@ public class GameOverController : MonoBehaviour
        FindObjectOfType<LivesUI>().Start();
        PlayerController.sceneCount = 2;  
     }
+
+    public void OnBackToMainButtonClicked()
+    {
+        SceneManager.LoadScene(0);
+        FindObjectOfType<LivesUI>().Start();
+    }
 }

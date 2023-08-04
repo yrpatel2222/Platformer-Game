@@ -1578,7 +1578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6516863067930105907, guid: 6c57e27ded1932f42ad52b801048a8ca, type: 3}
   bulletPos: {fileID: 293894687}
-  distFromPlayer: 8
+  distFromPlayer: 9
 --- !u!212 &927489080
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1932,7 +1932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334326831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.087162, y: -1.1927918, z: -2.2278643}
+  m_LocalPosition: {x: -40.087162, y: -0.56, z: -2.2278643}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

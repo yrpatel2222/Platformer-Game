@@ -40,7 +40,7 @@ public class AudioManager : MonoBehaviour
         {
             AudioLevel5();
         }
-        else if (SceneManager.GetActiveScene().name == "LoadScene")
+        else if (SceneManager.GetActiveScene().name == "LoadScene" || SceneManager.GetActiveScene().name == "StartScene")
         {
             source1.Stop();
             source2.Stop();

@@ -43,7 +43,7 @@ public class LivesUI : MonoBehaviour
         {
             // Add game over logic here
             // For example: Reload the level, show game over screen, etc.
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("LoadScene");
         }
     }
 
