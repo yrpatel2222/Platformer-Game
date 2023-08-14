@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(sceneCount);
             sceneCount++;
             FindObjectOfType<LivesUI>().IncreaseLives();
+            FindObjectOfType<LevelsUI>().NextLevel();
         }
     }
 
